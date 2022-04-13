@@ -1,7 +1,11 @@
-import "./Section.css";
-
-const Section = ({ children, section }) => {
-  return <section className={`section ${section}`}>{children}</section>;
+const Section = ({ children, section, id }) => {
+  return (
+    <>
+      <section className={`section ${section}`} id={id}>
+        {children}
+      </section>
+    </>
+  );
 };
 
 export { Section };

@@ -1,38 +1,45 @@
-import "./Header.css";
+import { useState } from "react";
+import { Menu } from "../elements/Menu";
+import { Link } from "react-router-dom";
+import { MenuIcon } from "../Icons/MenuIcon";
+import { CloseIcon } from "../Icons/CloseIcon";
+import { SearchIcon } from "../Icons/SearchIcon";
+import { Modal } from "../elements/Modal";
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+  const [modal, setModal] = useState(false);
+
   return (
     <>
       <header className='header'>
         <nav className='header__navbar'>
           <div className='header__navbar-menu'>
-            <figure className='header__navbar-menu_figure'>
-              <img
-                src='./Menu.svg'
-                alt='Menu'
-                className='header__navbar-menu_figure-icon'
-              />
-            </figure>
+            {menu ? (
+              <CloseIcon toggle={menu} setToggle={setMenu} />
+            ) : (
+              <MenuIcon toggle={menu} setToggle={setMenu} />
+            )}
+
+            {menu && <Menu />}
           </div>
 
           <div className='header__navbar-logo'>
-            <figure className='header__navbar-logo_figure'>
-              <img
-                src='./Logo.svg'
-                alt='Logo'
-                className='header__navbar-logo_figure-image'
-              />
-            </figure>
+            <Link to=''>
+              <figure className='header__navbar-logo_figure'>
+                <img
+                  src='./Logo.svg'
+                  alt='Logo'
+                  className='header__navbar-logo_figure-image'
+                />
+              </figure>
+            </Link>
           </div>
 
           <div className='header__navbar-search'>
-            <figure className='header__navbar-search_figure'>
-              <img
-                src='./Search.svg'
-                alt='Search'
-                className='header__navbar-search_figure-icon'
-              />
-            </figure>
+            <SearchIcon toggle={modal} setToggle={setModal} />
+
+            {modal && <Modal toggle={modal} setToggle={setModal} />}
           </div>
         </nav>
       </header>

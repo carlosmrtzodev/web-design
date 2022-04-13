@@ -1,10 +1,9 @@
-import "./About.css";
 import { Section } from "../containers/Section";
 
 const About = () => {
   return (
     <>
-      <Section section='about'>
+      <Section section='about' id='about'>
         <div className='about__row'>
           <div className='about__row-text'>
             <h2 className='about__row-text_title'>Title</h2>

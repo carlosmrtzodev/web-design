@@ -1,19 +1,13 @@
-import "./Reviews.css";
+import { QuoteIcon } from "../Icons/QuoteIcon";
 import { Section } from "../containers/Section";
 
 const Reviews = () => {
   return (
     <>
-      <Section section='reviews'>
+      <Section section='reviews' id='reviews'>
         <div className='reviews__container'>
           <div className='reviews__container-quote'>
-            <figure className='reviews__container-quote_figure'>
-              <img
-                className='reviews__container-quote_figure-icon'
-                src='./Quote.svg'
-                alt='Quote'
-              />
-            </figure>
+            <QuoteIcon />
           </div>
 
           <div className='reviews__container-text'>

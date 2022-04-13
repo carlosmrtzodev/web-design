@@ -1,5 +1,3 @@
-import "./Main.css";
-
 const Main = ({ children }) => {
   return (
     <>
