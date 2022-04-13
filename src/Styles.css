@@ -333,6 +333,7 @@ a {
 .reviews__container-controls_circle {
   width: 1rem;
   height: 1rem;
+  cursor: pointer;
   border-radius: 2.5rem;
   background-color: var(--color-grey);
 }
@@ -381,6 +382,9 @@ a {
   font-family: var(--font-sans);
   justify-content: space-between;
   border-bottom: 0.1rem solid var(--color-secondary);
+}
+.accordion__button:hover {
+  color: var(--color-main);
 }
 .accordion__panel {
   overflow: hidden;
@@ -454,7 +458,7 @@ a {
   width: 100%;
   margin: auto;
   display: flex;
-  padding: 12rem 0;
+  padding: 12rem 0 6rem 0;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -489,6 +493,17 @@ a {
   transition: all ease 0.4s;
 }
 
+.top {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  right: var(--spacing-base);
+  bottom: var(--spacing-base);
+  padding: var(--spacing-base);
+  background-color: var(--color-main);
+}
+
 @media screen and (max-width: 1024px) {
   .hero__text {
     width: 85%;
@@ -520,6 +535,27 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
+  ::placeholder {
+    font-size: var(--size-ss);
+  }
+
+  h1 {
+    font-size: var(--size-xl);
+  }
+  h2 {
+    font-size: var(--size-lg);
+  }
+  h3 {
+    font-size: var(--size-md);
+  }
+  h4 {
+    font-size: var(--size-sm);
+  }
+  p,
+  a {
+    font-size: var(--size-ss);
+  }
+
   .menu {
     width: 70%;
   }
@@ -543,6 +579,9 @@ a {
 
   .reviews__container-text {
     width: 100%;
+  }
+  .reviews__container-text_author {
+    font-size: var(--size-ss);
   }
 
   .accordion {

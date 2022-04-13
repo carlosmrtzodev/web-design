@@ -21,7 +21,7 @@ const About = () => {
             <img
               className='about__row-figure_ilustration'
               src='./image-1.svg'
-              alt=''
+              alt='Ilustration 1'
             />
           </figure>
         </div>
@@ -31,12 +31,13 @@ const About = () => {
             <img
               className='about__row-figure_ilustration'
               src='./image-2.svg'
-              alt=''
+              alt='Ilustration 2'
             />
           </figure>
 
           <div className='about__row-text right'>
             <h2 className='about__row-text_title'>Title</h2>
+
             <p className='about__row-text_paragraph'>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

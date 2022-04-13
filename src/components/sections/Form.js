@@ -5,6 +5,7 @@ const Form = () => {
     e.preventDefault();
     alert("Form Submit!");
   };
+
   return (
     <>
       <Section section='form' id='contact'>

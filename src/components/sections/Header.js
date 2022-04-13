@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Menu } from "../elements/Menu";
 import { Link } from "react-router-dom";
+import { Modal } from "../elements/Modal";
 import { MenuIcon } from "../Icons/MenuIcon";
 import { CloseIcon } from "../Icons/CloseIcon";
 import { SearchIcon } from "../Icons/SearchIcon";
-import { Modal } from "../elements/Modal";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);

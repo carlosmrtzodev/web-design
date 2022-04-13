@@ -6,12 +6,15 @@ const Menu = () => {
       <div className='menu'>
         <div className='menu__container'>
           <div className='menu__container-title'>
-            <h3 className='menu__container-title_text'>Menu</h3>
+            <h2 className='menu__container-title_text'>Menu</h2>
           </div>
 
           <ul className='menu__container-nav'>
             <li className='menu__container-nav_item'>
-              <a className='menu__container-nav_item-links' href='#home'>
+              <a
+                className='menu__container-nav_item-links'
+                href='#home'
+                rel='noopener noreferrer'>
                 Home
               </a>
 
@@ -19,7 +22,10 @@ const Menu = () => {
             </li>
 
             <li className='menu__container-nav_item'>
-              <a className='menu__container-nav_item-links' href='#about'>
+              <a
+                className='menu__container-nav_item-links'
+                href='#about'
+                rel='noopener noreferrer'>
                 About
               </a>
 
@@ -27,7 +33,10 @@ const Menu = () => {
             </li>
 
             <li className='menu__container-nav_item'>
-              <a className='menu__container-nav_item-links' href='#reviews'>
+              <a
+                className='menu__container-nav_item-links'
+                href='#reviews'
+                rel='noopener noreferrer'>
                 Reviews
               </a>
 
@@ -35,7 +44,10 @@ const Menu = () => {
             </li>
 
             <li className='menu__container-nav_item'>
-              <a className='menu__container-nav_item-links' href='#faq'>
+              <a
+                className='menu__container-nav_item-links'
+                href='#faq'
+                rel='noopener noreferrer'>
                 FAQ
               </a>
 
@@ -43,7 +55,10 @@ const Menu = () => {
             </li>
 
             <li className='menu__container-nav_item'>
-              <a className='menu__container-nav_item-links' href='#contact'>
+              <a
+                className='menu__container-nav_item-links'
+                href='#contact'
+                rel='noopener noreferrer'>
                 Contact
               </a>
 

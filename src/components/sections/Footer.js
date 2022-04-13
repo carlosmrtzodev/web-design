@@ -1,22 +1,45 @@
+import Top from "../elements/Top";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 const Footer = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  const ScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, [showButton]);
+
   return (
     <>
       <footer className='footer'>
         <div className='footer__logo'>
-          <figure className='footer__logo-figure'>
-            <img
-              className='footer__logo-figure_logo'
-              src='./Logo.svg'
-              alt='Footer Logo'
-            />
-          </figure>
+          <Link to='/'>
+            <figure className='footer__logo-figure'>
+              <img
+                className='footer__logo-figure_logo'
+                src='./Logo.svg'
+                alt='Footer Logo'
+              />
+            </figure>
+          </Link>
 
           <p className='footer__logo-copyright'>
             MejorconSalud is a property of Grupo MContigo ©2012 – 2022. All
             rights reserved.
           </p>
         </div>
-
         <div className='footer__links'>
           <ul className='footer__links-nav'>
             <li className='footer__links-nav_item'>
@@ -56,6 +79,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
+        {showButton && <Top scroll={ScrollToTop} />}
       </footer>
     </>
   );

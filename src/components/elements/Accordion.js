@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DownIcon } from "../Icons/DownIcon";
 
 const Accordion = ({ title }) => {
   const [active, setActive] = useState(false);
@@ -10,7 +11,8 @@ const Accordion = ({ title }) => {
           className='accordion__button'
           onClick={() => setActive(!active)}>
           {title}
-          <img className='accordion__button-down' src='./Down.svg' alt='Down' />
+
+          <DownIcon />
         </button>
 
         {active && (
