@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  margin: auto;
+  max-width: 1024px;
+}
+.header__navbar {
+  display: flex;
+  padding: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__navbar-menu_figure-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.header__navbar-search_figure-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}

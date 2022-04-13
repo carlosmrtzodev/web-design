@@ -1,0 +1,60 @@
+::placeholder {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.form {
+  gap: 0.8rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  max-width: 1024px;
+  flex-direction: column;
+}
+.form__title {
+  width: 100%;
+  text-align: center;
+}
+.form__title-text {
+  color: #419fb9;
+}
+.form__container {
+  width: 75%;
+  gap: 0.8rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form__container-group,
+.form__container-group_inputs,
+.form__container-group_textarea {
+  width: 100%;
+}
+.form__container-group_inputs,
+.form__container-group_textarea {
+  outline: none;
+  padding: 0.8rem;
+  border-radius: none;
+  border: solid 0.1rem #419fb9;
+}
+.form__container-group_textarea {
+  resize: none;
+}
+.form__container-submit_button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  padding: 0.4rem 2rem;
+  transition: all ease 0.4s;
+  background-color: #419fb9;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.form__container-submit_button:hover {
+  filter: brightness(1.1);
+}

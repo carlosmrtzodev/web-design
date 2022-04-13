@@ -1,0 +1,34 @@
+.accordion {
+  width: 75%;
+  margin: 0 auto;
+}
+.accordion__button {
+  width: 100%;
+  border: none;
+  outline: none;
+  display: flex;
+  cursor: pointer;
+  padding: 0.8rem;
+  color: #414141;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  align-items: center;
+  transition: all ease 0.4s;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #f778b9;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.accordion__panel {
+  padding: 0.8rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .accordion {
+    width: 85%;
+  }
+  .accordion__button {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+}

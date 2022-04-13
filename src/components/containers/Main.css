@@ -1,0 +1,6 @@
+.article {
+  gap: 12rem;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
