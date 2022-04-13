@@ -1,6 +1,7 @@
 import Top from "../elements/Top";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
@@ -80,7 +81,17 @@ const Footer = () => {
           </ul>
         </div>
 
-        {showButton && <Top scroll={ScrollToTop} />}
+        <AnimatePresence>
+          {showButton && (
+            <motion.div
+              animate={{ opacity: 1 }}
+              transition={{ ease: "easeOut", duration: 0.4 }}
+              initial={{ opacity: 0 }}
+              exit={{ opacity: 0 }}>
+              <Top scroll={ScrollToTop} />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </footer>
     </>
   );

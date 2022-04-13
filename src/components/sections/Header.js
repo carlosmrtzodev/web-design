@@ -5,6 +5,7 @@ import { Modal } from "../elements/Modal";
 import { MenuIcon } from "../Icons/MenuIcon";
 import { CloseIcon } from "../Icons/CloseIcon";
 import { SearchIcon } from "../Icons/SearchIcon";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -21,7 +22,17 @@ const Header = () => {
               <MenuIcon toggle={menu} setToggle={setMenu} />
             )}
 
-            {menu && <Menu />}
+            <AnimatePresence>
+              {menu && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  transition={{ ease: "easeOut", duration: 0.4 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}>
+                  <Menu />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <div className='header__navbar-logo'>
@@ -39,7 +50,17 @@ const Header = () => {
           <div className='header__navbar-search'>
             <SearchIcon toggle={modal} setToggle={setModal} />
 
-            {modal && <Modal toggle={modal} setToggle={setModal} />}
+            <AnimatePresence>
+              {modal && (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  transition={{ ease: "easeOut", duration: 0.4 }}
+                  initial={{ opacity: 0 }}
+                  exit={{ opacity: 0 }}>
+                  <Modal toggle={modal} setToggle={setModal} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </nav>
       </header>

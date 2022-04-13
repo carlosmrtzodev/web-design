@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Review } from "../elements/Review";
 import { QuoteIcon } from "../Icons/QuoteIcon";
 import { Section } from "../containers/Section";
-import { Review } from "../elements/Review";
 
 const Reviews = () => {
   const [active, setActive] = useState(0);
